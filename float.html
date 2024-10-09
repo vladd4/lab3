@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        font-size: 35px;
+        font-weight: 700;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .left-column {
+        float: left;
+        width: 40%;
+        background-color: #b8cce4;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right-column {
+        float: left;
+        width: 60%;
+        background-color: #b6d7a8;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .full-width-img {
+        clear: both;
+        width: 100%;
+        background-color: #2b78e4;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .full-width-text {
+        clear: both;
+        width: 100%;
+        background-color: #ffe599;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="left-column">
+          <p>Img.</p>
+        </div>
+        <div class="right-column">
+          <p>Text</p>
+        </div>
+      </div>
+      <div class="full-width-img">
+        <p>Img.</p>
+      </div>
+      <div class="full-width-text">
+        <p>Text</p>
+      </div>
+    </div>
+  </body>
+</html>
